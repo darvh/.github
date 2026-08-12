@@ -1,27 +1,33 @@
 # darvh
 
-Evidence-driven agent skills, measured in the open.
+<div align="center">
 
-Darvvh products are built as small, composable agent skills and verified with a
-shared benchmark harness — not by claims.
+[![web](https://img.shields.io/badge/web-darvh.com-0d9488?style=flat-square&logo=astro&logoColor=white)](https://darvh.com)
+[![bench live](https://img.shields.io/badge/bench-LIVE-22c55e?style=flat-square)](https://github.com/darvh/bench)
+[![license MIT](https://img.shields.io/badge/license-MIT-6366f1?style=flat-square)](https://github.com/darvh/bench/blob/main/LICENSE)
+
+</div>
+
+Agent skills are easy to claim and hard to verify. We build the skills and the
+bench that measures them in the same place, so a claim has to survive a
+recorded cell before it gets published.
 
 ## Live
 
 | product | what it does | source |
 | --- | --- | --- |
-| [signal](https://github.com/darvh/signal) | evidence-led uncertainty reduction and bounded recovery | skill |
-| [bench](https://github.com/darvh/bench) | one harness (docker + opencode) for every product's benchmark; arms, tasks, and results | repo |
-| [proof](https://github.com/darvh/proof) | turn a change into explicit obligations and reproducible evidence | repo |
+| [bench](https://github.com/darvh/bench) | one harness for every product: docker image, containerized opencode, official verifier, per-cell result | repo |
+| [signal](https://github.com/darvh/signal) | evidence-led uncertainty reduction and bounded recovery | repo + skill |
+| [proof](https://github.com/darvh/proof) | turns a change into explicit obligations and reproducible evidence | repo |
 
-## In development
+## The bench
 
-- **context** — deterministic discovery compiler for coding agents: task-conditioned, source-backed context capsules. No model calls, no repo mutation.
-- **line** — task execution and control plane.
-- **portal** — local agent server and control plane.
+Every cell is one harbor job. Arms differ only by the skill installed in the
+container plus a one-line hint. Nothing else: no host tooling, no plugins, no
+MCP. If a claim does not come from a recorded cell, treat it as a proposal.
 
-## Where to look
+## Start here
 
-- [darvh.com](https://darvh.com) — editorial surface: published what is implemented and measured.
-- [bench](https://github.com/darvh/bench) — the methodology every claim must pass: one cell, one harbor job, official verifier, arms differ only by installed skill.
-
-Publish what is implemented and measured. Label proposals, hypotheses, and early results clearly.
+- Read `bench/README.md` before trusting any skill claim.
+- [darvh.com](https://darvh.com) publishes what is implemented and measured; proposals and hypotheses are labeled as such.
+- Install signal from the signal repo's installer — one line, agent-agnostic, idempotent.
