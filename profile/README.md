@@ -18,7 +18,6 @@ recorded cell before it gets published.
 | --- | --- | --- |
 | [bench](https://github.com/darvh/bench) | one harness for every product: docker image, containerized opencode, official verifier, per-cell result | repo |
 | [signal](https://github.com/darvh/signal) | evidence-led uncertainty reduction and bounded recovery | repo + skill |
-| [proof](https://github.com/darvh/proof) | turns a change into explicit obligations and reproducible evidence | repo |
 
 ## The bench
 
